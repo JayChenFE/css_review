@@ -1,12 +1,30 @@
-[TOC]
+<!-- TOC -->
+
+- [html符号实体](#html%E7%AC%A6%E5%8F%B7%E5%AE%9E%E4%BD%93)
+- [伪类](#%E4%BC%AA%E7%B1%BB)
+    - [伪类顺序](#%E4%BC%AA%E7%B1%BB%E9%A1%BA%E5%BA%8F)
+- [伪元素](#%E4%BC%AA%E5%85%83%E7%B4%A0)
+- [CSS工作原理](#css%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)
+    - [继承](#%E7%BB%A7%E6%89%BF)
+    - [层叠](#%E5%B1%82%E5%8F%A0)
+        - [数字值](#%E6%95%B0%E5%AD%97%E5%80%BC)
+    - [计算特指度](#%E8%AE%A1%E7%AE%97%E7%89%B9%E6%8C%87%E5%BA%A6)
+        - [使用"ICE"公式计算三个值：](#%E4%BD%BF%E7%94%A8ice%E5%85%AC%E5%BC%8F%E8%AE%A1%E7%AE%97%E4%B8%89%E4%B8%AA%E5%80%BC%EF%BC%9A)
+        - [层叠规则四：顺序决定权重](#%E5%B1%82%E5%8F%A0%E8%A7%84%E5%88%99%E5%9B%9B%EF%BC%9A%E9%A1%BA%E5%BA%8F%E5%86%B3%E5%AE%9A%E6%9D%83%E9%87%8D)
+        - [简化版的层叠规则](#%E7%AE%80%E5%8C%96%E7%89%88%E7%9A%84%E5%B1%82%E5%8F%A0%E8%A7%84%E5%88%99)
+
+<!-- /TOC -->
+
 # html符号实体
+
 [菜鸟教程-html符号实体](http://www.runoob.com/tags/html-symbols.html)
-http://turner.faculty.swau.edu/webstuff/htmlsymbols.html
-http://htmlhelp.com/reference/html40/entities/special.html
+[](http://turner.faculty.swau.edu/webstuff/htmlsymbols.html)
+[](http://htmlhelp.com/reference/html40/entities/special.html)
 
-#伪类
+# 伪类
 
-##伪类顺序
+## 伪类顺序
+
 口诀 `L`o`V`e,`HA`
 参考:
 [简书](http://www.jianshu.com/p/c7d766e9dfdd)
@@ -37,15 +55,16 @@ e:target
 突出显示，很难知道你点击的链接对应着一大堆引证中的哪一个。
 
 # 伪元素
+
 1. ::first-letter 伪元素
     ```
-    e::first-letter
+        e::first-letter
     ```
     比如，以下CSS 规则：
     ```
     p::first-letter {font-size:300%;}
     ```
-    >如果不用伪元素创建这个首字符放大效果，必须手工给该字母加上<span>标签，
+    >如果不用伪元素创建这个首字符放大效果，必须手工给该字母加上`<span>`标签，
     >然后再为该标签应用样式。而伪元素实际上是替我们添加了无形的标签。
 
     ![](http://ww1.sinaimg.cn/large/006RLzNagy1fkvg0c5q4sj309z04274f.jpg)
