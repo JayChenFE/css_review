@@ -6,9 +6,10 @@
 
 <!-- /TOC -->
 
-![](leanote://file/getImage?fileId=59f69541ab64410aff000c90)
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-1.png)
 
 # CSS背景属性
+
 - background-color
 - background-image
 - background-repeat
@@ -19,6 +20,7 @@
 - background-clip、background-origin、background-break（目前尚未得到广泛支持）
 
 ## 背景重复
+
 background-repeat 属性有4 个值。
 
 - 默认值就是repeat
@@ -26,7 +28,7 @@ background-repeat 属性有4 个值。
 - repeat-y
 - no-repeat
 
-![](leanote://file/getImage?fileId=59f69541ab64410aff000c91)
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-2.png)
 
 ，CSS3 还规定另外两个值（但尚未得到浏览器支持），以控制背景图片重复确切的次数，即所有图片都是完整的，不会出现半张图片的现象。
 

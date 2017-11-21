@@ -23,11 +23,12 @@ p {margin:0; border:1px solid red;}
 img {float:left; margin:0 4px 4px 0;}
 ```
 
-![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/3-1.jpg)
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/3-1.png)
 >浮动非图片元素时，必须给它设定宽度，否则后果难以预料。图片无所谓，因为它本身有默认的宽度。
 
 ## 2. 创建分栏
-```
+
+```css
 p {
     float: left;
     margin: 0;
@@ -40,7 +41,8 @@ img {
     margin: 0 4px 4px 0;
 }
 ```
-![](leanote://file/getImage?fileId=59f68bceab64410d21000bdc)
+
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/3-2.png)
 
 ## 围住浮动元素的三种方法
 
