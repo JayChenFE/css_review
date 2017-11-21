@@ -1,3 +1,11 @@
+
+<!-- TOC -->
+
+- [CSS背景属性](#css%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
+    - [背景重复](#%E8%83%8C%E6%99%AF%E9%87%8D%E5%A4%8D)
+
+<!-- /TOC -->
+
 ![](leanote://file/getImage?fileId=59f69541ab64410aff000c90)
 
 # CSS背景属性
