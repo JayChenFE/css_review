@@ -2,11 +2,7 @@
 # 浮动
 CSS 设计float 属性的主要目的，是为了实现文本绕排图片的效果。然而，这个属性居然也成了创建多栏布局最简单的方式。
 ## 1. 文本绕排图片
-<<<<<<< HEAD
-```css
-=======
 ```
->>>>>>> refs/remotes/origin/master
 <img …… />
 <p>…the paragraph text…</p>
 CSS 规则如下。
@@ -19,11 +15,7 @@ img {float:left; margin:0 4px 4px 0;}
 >浮动非图片元素时，必须给它设定宽度，否则后果难以预料。图片无所谓，因为它本身有默认的宽度。
 
 ## 2. 创建分栏
-<<<<<<< HEAD
-```css
-=======
 ```
->>>>>>> refs/remotes/origin/master
 p {
     float: left;
     margin: 0;
