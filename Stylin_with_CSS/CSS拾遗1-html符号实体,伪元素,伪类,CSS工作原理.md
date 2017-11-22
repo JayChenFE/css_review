@@ -36,16 +36,16 @@ e:target
 用:target 伪类选中它。
 对于下面这个链接
 
-```
+```css
 <a href="#more_info">More Information</a>
 ```
 
 位于页面其他地方、ID 为more_info 的那个元素就是目标。该元素可能是这样的：
-```
+```css
 <h2 id="more_info">This is the information you are looking for.</h2>
 ```
 那么，如下CSS 规则
-```
+```css
 #more_info:target {background:#eee;}
 ```
 会在用户单击链接转向ID 为more_info 的元素时，为该元素添加浅灰色背景。
@@ -57,11 +57,11 @@ e:target
 # 伪元素
 
 1. ::first-letter 伪元素
-    ```
+    ```css
         e::first-letter
     ```
     比如，以下CSS 规则：
-    ```
+    ```css
     p::first-letter {font-size:300%;}
     ```
     >如果不用伪元素创建这个首字符放大效果，必须手工给该字母加上`<span>`标签，
@@ -70,11 +70,11 @@ e:target
     ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/1-1.jpg)
 
 2. ::first-line 伪元素
-    ```
+    ```css
     e::first-line
     ```
     可以选中文本段落（一般情况下是段落）的第一行。例如
-    ```
+    ```css
     p::first-line {font-variant:small-caps;}
     ```
     可以把第一行以小型大写字母显示
@@ -96,10 +96,10 @@ em 和ex 都是字体大小的单位，但在CSS 中，它们作为长度单位�
 以下就是浏览器层叠各个来源样式的顺序：
 
 1. 浏览器默认样式表
-1. 用户样式表
-1. 作者链接样式表（按照它们链接到页面的先后顺序）
-1. 作者嵌入样式
-1. 作者行内样式
+2. 用户样式表
+3. 作者链接样式表（按照它们链接到页面的先后顺序）
+4. 作者嵌入样式
+5. 作者行内样式
 
 ## 计算特指度
 
@@ -111,13 +111,13 @@ ICE 并非真正的三位数，只不过大多情况下把结果看成一个三�
 三个字母间的短横线是分隔符，并非减号。针对这个公式的计分办法如下：
 
 1. 选择符中有一个ID，就在I 的位置上加1；
-1. 选择符中有一个类，就在C 的位置上加1；
-1. 选择符中有一个元素（标签）名，就在E 的位置上加1；
-1. 得到一个三位数。
+2. 选择符中有一个类，就在C 的位置上加1；
+3. 选择符中有一个元素（标签）名，就在E 的位置上加1；
+4. 得到一个三位数。
 
 例子:
 
-```txt
+```css
 p                                0-0-1 特指度=1
 p.largetext                      0-1-1 特指度=11
 p#largetext                      1-0-1 特指度=101
@@ -149,7 +149,7 @@ body p#largetext ul.mylist li    1-1-4 特指度=114
     </div>
     ```
     和下面的规则
-    ```html
+    ```css
     div#cascade_demo p#inheritance_fact {color:blue;}
     ```
     2 - 0 - 2 （高特指度）    会导致单词“weak”变成蓝色，因为它从父元素p 那里继承了这个颜色值。但是，只要我们再给em 添加一条规则
