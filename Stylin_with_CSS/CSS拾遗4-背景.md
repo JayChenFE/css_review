@@ -60,11 +60,11 @@ background-repeat 属性有4 个值。
 p#center {background-position:center;}
 ```
 
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-3.png)  
+
+**`background-position` 属性的默认值`top` `left`    VS    `center ` `center`**
 
 
-`background-position` 属性的默认值`top` `left`  VS `center ` `center`
-
-![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-3.png)
 
 `background-position:center center` 设定图片中心点与元素中心点重合,以段落的中心点为起点，然后再向各个方向重复
 
@@ -83,6 +83,8 @@ background-position:50% 50%;
 ```
 
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-4.png)
+
+
 
 ###  背景位置的值
 
