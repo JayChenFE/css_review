@@ -243,7 +243,11 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
       .content-box { background-clip: content-box; }
       ```
 
-      ​
+    - 结果
+
+      ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png)
+
+       
 
 - `background-origin`
 
