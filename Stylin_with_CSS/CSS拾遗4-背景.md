@@ -3,6 +3,10 @@
 
 - [CSS背景属性](#css%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
     - [背景重复](#%E8%83%8C%E6%99%AF%E9%87%8D%E5%A4%8D)
+    - [背景位置](#%E8%83%8C%E6%99%AF%E4%BD%8D%E7%BD%AE)
+        - [背景位置的值](#%E8%83%8C%E6%99%AF%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%80%BC)
+    - [背景尺寸](#%E8%83%8C%E6%99%AF%E5%B0%BA%E5%AF%B8)
+    - [背景粘附](#%E8%83%8C%E6%99%AF%E7%B2%98%E9%99%84)
 
 <!-- /TOC -->
 
@@ -156,5 +160,101 @@ background-position:50% 50%;
 `background-attachment:fixed`  最常用于给`body`  元素中心位置添加淡色水印，让水印
 不随页面滚动而移动。
 
+## 简写背景属性
+
+```css
+body {
+background-image:url(images/watermark.png);
+background-position:center;
+background-color:#fff;
+background-repeat:no-repeat;
+background-size:contain;
+background-attachment:fixed;
+}
+```
 
 
+
+等价于
+
+```css
+body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
+```
+
+声明中少写了哪个属性的值（比如没写no-repeat），就会使用相应属性的默认值（repeat）。
+
+## 其他CSS3 背景属性
+
+记得检测浏览器的支持情况
+
+- `background-clip` 
+
+  控制背景绘制区域的范围，比如可以让背景颜色和背景图片只出现在内容区，而不出现在内边距区域。
+
+  默认情况下，背景绘制区域是扩展到边框外边界的。
+
+  简单说就是如何剪切超出的部分。
+
+  - 语法:
+
+    ```css
+    background-clip: border-box
+    background-clip: padding-box
+    background-clip: content-box
+    background-clip: inherit
+    ```
+
+  - 取值:
+
+    - `border-box`:
+
+         背景延伸到边框外沿（但是在边框之下）。
+
+    - `padding-box`
+
+      边框下面没有背景，即背景延伸到内边距外沿。
+
+    - `content-box`
+
+      背景裁剪到内容区 (`content-box) `外沿。
+
+  - 例子:
+
+    - html
+
+      ```html
+      <p class="border-box">The yellow background extends behind the border.</p>
+      <p class="padding-box">The yellow background extends to the inside edge of the border.</p>
+      <p class="content-box">The yellow background extends only to the edge of the content box.</p>
+      ```
+
+    - css:
+
+      ```css
+      p {
+         border: 5px navy;
+         border-style: dotted double;
+         margin: 1em;
+         padding: 2em;
+         background: #F8D575;
+      }
+      .border-box { background-clip: border-box; }
+      .padding-box { background-clip: padding-box; }
+      .content-box { background-clip: content-box; }
+      ```
+
+      ​
+
+- `background-origin`
+
+  控制背景定位区域的原点，可以设定为元素盒子左上角以外的位置。
+
+  比如，可以设定以内容区左上角作为原点。
+
+- `background-break`
+
+   控制分离元素（比如跨越多行的行内盒子）的显示效果。
+
+```
+
+```
