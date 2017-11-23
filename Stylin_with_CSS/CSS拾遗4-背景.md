@@ -247,7 +247,8 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 
       ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png)
 
-       
+
+      ![(https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png) 
 
 - `background-origin`
 
@@ -258,7 +259,3 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 - `background-break`
 
    控制分离元素（比如跨越多行的行内盒子）的显示效果。
-
-```
-
-```
