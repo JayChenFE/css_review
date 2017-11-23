@@ -7,6 +7,8 @@
         - [背景位置的值](#%E8%83%8C%E6%99%AF%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%80%BC)
     - [背景尺寸](#%E8%83%8C%E6%99%AF%E5%B0%BA%E5%AF%B8)
     - [背景粘附](#%E8%83%8C%E6%99%AF%E7%B2%98%E9%99%84)
+    - [简写背景属性](#%E7%AE%80%E5%86%99%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
+    - [其他CSS3 背景属性](#%E5%85%B6%E4%BB%96css3-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
 
 <!-- /TOC -->
 
@@ -187,75 +189,127 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 
 记得检测浏览器的支持情况
 
-- `background-clip` 
+### `background-clip` 
 
-  控制背景绘制区域的范围，比如可以让背景颜色和背景图片只出现在内容区，而不出现在内边距区域。
+控制背景绘制区域的范围，比如可以让背景颜色和背景图片只出现在内容区，而不出现在内边距区域。
 
-  默认情况下，背景绘制区域是扩展到边框外边界的。
+默认情况下，背景绘制区域是扩展到边框外边界的。
 
-  简单说就是如何剪切超出的部分。
+简单说就是如何剪切超出的部分。
 
-  - 语法:
+- 语法:
 
-    ```css
-    background-clip: border-box
-    background-clip: padding-box
-    background-clip: content-box
-    background-clip: inherit
+  ```css
+  background-clip: border-box
+  background-clip: padding-box
+  background-clip: content-box
+  background-clip: inherit
+  ```
+
+- 取值:
+
+  - `border-box(默认值)`
+
+       背景延伸到边框外沿（但是在边框之下）。
+
+  - `padding-box`
+
+    边框下面没有背景，即背景延伸到内边距外沿。
+
+  - `content-box`
+
+    背景裁剪到内容区 (`content-box) `外沿。
+
+- 例子:
+
+  - html
+
+    ```html
+    <p class="border-box">The yellow background extends behind the border.</p>
+    <p class="padding-box">The yellow background extends to the inside edge of the border.</p>
+    <p class="content-box">The yellow background extends only to the edge of the content box.</p>
     ```
 
-  - 取值:
+  - css:
 
-    - `border-box`:
+    ```css
+    p {
+       border: 5px navy;
+       border-style: dotted double;
+       margin: 1em;
+       padding: 2em;
+       background: #F8D575;
+    }
+    .border-box { background-clip: border-box; }
+    .padding-box { background-clip: padding-box; }
+    .content-box { background-clip: content-box; }
+    ```
 
-         背景延伸到边框外沿（但是在边框之下）。
+  - 结果
 
-    - `padding-box`
+    ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png)
 
-      边框下面没有背景，即背景延伸到内边距外沿。
+    ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-9.png)  
 
-    - `content-box`
+### `background-origin`
 
-      背景裁剪到内容区 (`content-box) `外沿。
+控制背景定位区域的原点，可以设定为元素盒子左上角以外的位置。
 
-  - 例子:
+比如，可以设定以内容区左上角作为原点。
 
-    - html
+- 语法:
 
-      ```html
-      <p class="border-box">The yellow background extends behind the border.</p>
-      <p class="padding-box">The yellow background extends to the inside edge of the border.</p>
-      <p class="content-box">The yellow background extends only to the edge of the content box.</p>
-      ```
+  ```css
+  background-origin: border-box
+  background-origin: padding-box
+  background-origin: content-box
 
-    - css:
+  background-origin: inherit
+  ```
 
-      ```css
-      p {
-         border: 5px navy;
-         border-style: dotted double;
-         margin: 1em;
-         padding: 2em;
-         background: #F8D575;
-      }
-      .border-box { background-clip: border-box; }
-      .padding-box { background-clip: padding-box; }
-      .content-box { background-clip: content-box; }
-      ```
+- 取值:
 
-    - 结果
+  - `border-box`:
 
-      ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png)
+    背景图片的摆放以`border`区域为参考 
 
+  - `padding-box`
 
-      ![(https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png) 
+    背景图片的摆放以`padding`区域为参考 
 
-- `background-origin`
+  - `content-box` 
 
-  控制背景定位区域的原点，可以设定为元素盒子左上角以外的位置。
+  背景图片的摆放以`content`区域为参考 
 
-  比如，可以设定以内容区左上角作为原点。
+- 例子:
 
-- `background-break`
+  ```css
+  /*例1*/
+  .example {
+     border: 10px double;
+     padding: 10px;
+     background: url('image.jpg');
+     background-position: center left;
+     /* 背景将在内容区padding内部填充 */ 
+     background-origin: content-box;
+  }
 
-   控制分离元素（比如跨越多行的行内盒子）的显示效果。
+  /*例2*/
+  #example2 {
+      border: 4px solid black;
+      padding: 10px;
+      background: url('image.gif');
+      background-repeat: no-repeat;
+      background-origin: border-box;
+   }
+
+  /*例3*/
+  div {
+    background-image: url('logo.jpg'), url('mainback.png');
+    background-position: top right, 0px 0px;
+    background-origin: content-box, padding-box;
+  }
+  ```
+  ### ~~`background-break`~~ 
+
+  ~~控制分离元素（比如跨越多行的行内盒子）的显示效果。~~ 
