@@ -1,4 +1,5 @@
 
+
 <!-- TOC -->
 
 - [CSS背景属性](#css%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
@@ -9,9 +10,14 @@
     - [背景粘附](#%E8%83%8C%E6%99%AF%E7%B2%98%E9%99%84)
     - [简写背景属性](#%E7%AE%80%E5%86%99%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
     - [其他CSS3 背景属性](#%E5%85%B6%E4%BB%96css3-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7)
+        - [`background-clip`](#background-clip)
+        - [`background-origin`](#background-origin)
+        - [~~`background-break`~~](#background-break)
+    - [多背景图片](#%E5%A4%9A%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87)
+        - [厂商前缀](#%E5%8E%82%E5%95%86%E5%89%8D%E7%BC%80)
+    - [背景渐变](#%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98)
 
 <!-- /TOC -->
-
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-1.png)
 
 # CSS背景属性
@@ -90,9 +96,7 @@ background-position:50% 50%;
 
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-4.png)
 
-
-
-###  背景位置的值
+### 背景位置的值
 
 设定背景位置时可以使用三种值：
 
@@ -144,8 +148,6 @@ background-position:50% 50%;
 - cover：拉大图片，使其完全填满背景区；保持宽高比。
 - contain：缩放图片，使其恰好适合背景区；保持宽高比。
 
-
-
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-7.png)
 
 **给一个居中的不重复的背景图片应用不同的`background-size`  值的效果**
@@ -154,7 +156,7 @@ background-position:50% 50%;
 
 ## 背景粘附
 
-`background-attachment `属性控制滚动元素内的背景图片是否随元素滚动而移动,取值为:
+`background-attachment`属性控制滚动元素内的背景图片是否随元素滚动而移动,取值为:
 
 - `scroll` (默认值):背景图片随元素移动
 - `fixed` : 背景图片不会随元素滚动而移
@@ -174,8 +176,6 @@ background-size:contain;
 background-attachment:fixed;
 }
 ```
-
-
 
 等价于
 
@@ -218,7 +218,7 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 
   - `content-box`
 
-    背景裁剪到内容区 (`content-box) `外沿。
+    背景裁剪到内容区 `(content-box)`外沿。
 
 - 例子:
 
@@ -249,7 +249,7 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 
     ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-8.png)
 
-    ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-9.png)  
+    ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-9.png)
 
 ### `background-origin`
 
@@ -271,15 +271,15 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
 
   - `border-box`:
 
-    背景图片的摆放以`border`区域为参考 
+    背景图片的摆放以`border`区域为参考
 
   - `padding-box`
 
-    背景图片的摆放以`padding`区域为参考 
+    背景图片的摆放以`padding`区域为参考
 
-  - `content-box` 
+  - `content-box`
 
-  背景图片的摆放以`content`区域为参考 
+    背景图片的摆放以`content`区域为参考
 
 - 例子:
 
@@ -310,6 +310,75 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
     background-origin: content-box, padding-box;
   }
   ```
-  ### ~~`background-break`~~ 
 
-  ~~控制分离元素（比如跨越多行的行内盒子）的显示效果。~~ 
+### ~~`background-break`~~
+
+~~控制分离元素（比如跨越多行的行内盒子）的显示效果。~~ 
+
+## 多背景图片
+
+  ```css
+  p {
+      height: 150px;
+      width: 348px;
+      border: 2px solid #aaa;
+      margin: 20px auto;
+      font: 24px/150px helvetica, arial, sansserif;
+      text-align: center;
+      background: url(images/turq_spiral.png) 30px -10px no-repeat,
+      url(images/pink_spiral.png) 145px 0px no-repeat,
+      /*为了防止图片加载失败时元素背景处于默认的透明状态，
+        在最后一条声明中加上了背景颜色（#ffbd75）*/
+      url(images/gray_spiral.png) 140px -30px no-repeat, #ffbd75;
+  }
+  ```
+
+  4.10
+
+  ​
+
+  <center>**多张图片可以在背景中叠加起来，CSS 规则中先列出的图片在上层**</center> 
+
+### 厂商前缀
+
+为鼓励浏览器厂商尽早采用W3C 的CSS3 推荐标准，于是就产生了`VSP（Vendor Specific Prefixes，厂商前缀）` 的概念 
+
+以`W3C` 推荐的`transform`  属性为例
+
+```css
+transform: skewX(-45deg);
+```
+
+**由于这个属性还没有完全定案**，为保证在大多数浏览器以及它们的实验性实现中能够使用这个属性，应该针对想要支持的浏览器为该属性添加VSP。每个浏览器只使用各自能理解的属性声明。
+
+```css
+-moz-transform:skewX(-45deg); /* Firefox */
+-webkit-transform:skewX(-45deg); /* Chrome 及Safari */
+-ms-transform:skewX(-45deg); /* 微软Internet Explorer */
+-o-transform:skewX(-45deg); /* Opera */
+transform:skewX(-45deg); /* 最后是W3C 标准属性 */
+```
+
+以下CSS3 属性必须加`VPS`：
+
+```txt
+border-image translate
+
+linear-gradient transition
+
+radial-gradient background*
+
+transform background-image*
+
+transform-origin
+
+* 针对背景图片或渐变
+
+```
+
+## 背景渐变
+
+  渐变就是在一定长度内两种或多种颜色之间自然的过渡,渐变分为两种:
+
+- 线性渐变:从元素的一端延伸到另一端
+- 放射性渐变:从元素内一点向四周发散
