@@ -332,10 +332,7 @@ body {background:url(images/watermark.png) center #fff no-repeat contain fixed;}
       url(images/gray_spiral.png) 140px -30px no-repeat, #ffbd75;
   }
   ```
-
-  4.10
-
-  ​
+  ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/4-10.png)
 
   <center>**多张图片可以在背景中叠加起来，CSS 规则中先列出的图片在上层**</center> 
 
