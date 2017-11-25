@@ -379,3 +379,53 @@ transform-origin
 
 - 线性渐变:从元素的一端延伸到另一端
 - 放射性渐变:从元素内一点向四周发散
+
+>渐变是CSS 帮我们生成的背景图片。添加渐变可以使用`background-image`   属性，也可以使用简写`background `属性。
+
+下面是一个渐变的例子:
+
+```html
+<div class="gradient1"><h1>1</h1></div>
+<div class="gradient2"><h1>2</h1></div>
+<div class="gradient3"><h1>3</h1></div>
+```
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 150px;
+    width: 200px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 16px;
+}
+
+
+/* styles the element box 为元素盒子添加样式 */
+/* centers the headline vertically and horizontally 标题垂直水平居中*/
+
+h1 {
+    text-align: left;
+    font: 25px Helvetica, Arial, sans-serif;
+    margin: 120px 5px;
+}
+
+/* top to bottom by default  默认为从上到下*/
+.gradient1 {
+    background: -webkit-linear-gradient(#e86a43, #fff);
+}
+/* left to right 从左到右*/
+.gradient2 {
+    background: -webkit-linear-gradient(left, #64d1dd, #fff);
+}
+/* top-left to bottom-right  左上到右下*/
+.gradient3 {
+    background: -webkit-linear-gradient(-45deg, #e86a43, #fff);
+}
+
+```
+
