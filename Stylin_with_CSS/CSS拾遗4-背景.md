@@ -382,6 +382,8 @@ transform-origin
 
 >渐变是CSS 帮我们生成的背景图片。添加渐变可以使用`background-image`   属性，也可以使用简写`background `属性。
 
+### 语法:
+
 下面是一个渐变的例子:
 
 ```html
