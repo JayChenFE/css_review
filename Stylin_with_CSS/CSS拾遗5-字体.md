@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [字体来源](#%E5%AD%97%E4%BD%93%E6%9D%A5%E6%BA%90)
+- [字体属性](#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7)
+    - [字体族（font-family）](#%E5%AD%97%E4%BD%93%E6%97%8F%EF%BC%88font-family%EF%BC%89)
+        - [字体栈](#%E5%AD%97%E4%BD%93%E6%A0%88)
+            - [常见的通用的字体类](#%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%E7%9A%84%E5%AD%97%E4%BD%93%E7%B1%BB)
+    - [字体大小(font-size)](#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8Ffont-size)
+    - [字体样式(font-style)](#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8Ffont-style)
+    - [字体粗细](#%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86)
+    - [字体变化](#%E5%AD%97%E4%BD%93%E5%8F%98%E5%8C%96)
+    - [简写字体属性](#%E7%AE%80%E5%86%99%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7)
+
+<!-- /TOC -->
 # 字体来源
 
 网页中的字体有三个来源
@@ -25,7 +39,7 @@
 >
 > `字体` 是“文字的不同体式”或者“字的形体结构”
 >
-> ​	对于英文而言，每种字体都是由一组具有独特样式的字母、数字和符号组成的。<br>	根据外观，字体可以分为不同的`类别（fontcollection）` ，包括:
+> ​对于英文而言，每种字体都是由一组具有独特样式的字母、数字和符号组成的。<br>	根据外观，字体可以分为不同的`类别（fontcollection）` ，包括:
 >
 > - 衬线字体（serif）、
 >
@@ -39,7 +53,7 @@
 >
 >   ​
 >
->   而字体族中又可以包含不同的 	字型（font face），反映了相应字体族基本设计的不同变化<br>例如`Times	Roman`、`Times Bold`、`Helvetica Condensed `和  `Bodoni italic` 。
+>   而字体族中又可以包含不同的字型（font face），反映了相应字体族基本设计的不同变化<br>例如`Times    Roman`、`Times Bold`、`Helvetica Condensed`和  `Bodoni italic` 。
 >
 > `文本` 就是一组字或字符，比如章标题、段落正文等等，跟使用什么字体无关。
 >
@@ -49,7 +63,7 @@
 >
 > `文本属性` 描述对文本的处理方式。比如，行高或者字符间距多大，有没有下划线和缩进
 >
->  如果你想让文字加粗，或者变斜体，可以设定字体属性。<br> 而行高和缩进这种只有对文本块（比如标题和段落）才有意义的样式，则要使用文本属性设定。
+> 如果你想让文字加粗，或者变斜体，可以设定字体属性。<br> 而行高和缩进这种只有对文本块（比如标题和段落）才有意义的样式，则要使用文本属性设定。
 
 ## 字体族（font-family）
 
@@ -173,6 +187,15 @@ p {font: bold italic small-caps .9em helvetica, arial, sans-serif;}
 ```
 
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/5-2.png)
+
 <center>**一条声明指定字体加粗、斜体、小型大写字母、大小和字体族**</center>
 
+简写形式要遵守两条规则:
 
+- 必须声明`font-size` 和`font-family` 的值。
+- 所有值必须按如下顺序声明:
+  1. `font-weight`、`font-style`、`font-variant`  不分先后
+  1. 然后是`font-size`
+  1. 最后是`font-family`
+
+> 设定font-size 属性的同时，可以顺便设定`line-height` （行高）值。也就是说，字体大小和行高的值可以写在一块，比如`12px/1.5` 。当然，`line-height`  是文本属性
