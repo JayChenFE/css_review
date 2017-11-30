@@ -188,7 +188,9 @@ p {font: bold italic small-caps .9em helvetica, arial, sans-serif;}
 
 ![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/5-2.png)
 
-<center>**一条声明指定字体加粗、斜体、小型大写字母、大小和字体族**</center>
+<center>一条声明指定字体加粗、斜体、小型大写字母、大小和字体族</center>
+
+<br>
 
 简写形式要遵守两条规则:
 
