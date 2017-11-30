@@ -172,8 +172,7 @@ small-caps会导致所有小写英文字母变成小型大写字母
 p {font: bold italic small-caps .9em helvetica, arial, sans-serif;}
 ```
 
-
-
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/5-2.png)
 <center>**一条声明指定字体加粗、斜体、小型大写字母、大小和字体族**</center>
 
 
