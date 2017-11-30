@@ -119,4 +119,61 @@ helvetica, arial, sans-serif
 
 - 相对字体大小
 
-  如果你给某个元素设定了相对字体大小，则该元素的字体大小要相对于最近的“被设定过字体大小的”祖先元素来确定。
+  如果你给某个元素设定了相对字体大小，则该元素的字体大小要相对于**最近的“被设定过字体大小的”**祖先元素来确定。
+
+  例如:
+
+  ```html
+  <body>
+  <p>This is <strong>very important!</strong></p>
+  </body>
+  ```
+
+  ```css
+  p {font-size:.75em;}
+  strong {font-size:.75em;}
+  ```
+
+  >想使用em，但又需要设定具体的像素大小，可以把body 的font-size 设定为62.5%。这样，就等于把基准大小从16 像素改为10 像素（16×62.5%=10）。然后，em 与像素的对应关系就十分明确了，比如1em 等于10 像素，1.5em 等于15 像素，2em 等于20 像素，等等
+
+- rem
+
+## 字体样式(font-style)
+
+值:
+
+- italic
+- oblique
+- normal
+
+`font-style` 的作用仅仅是通过`italic` 把正体设为斜体，或者通过`normal` 把斜体设为正体.用oblique 代替italic 的结果 也一样. 
+
+## 字体粗细
+
+可能的值：100、200……900，或者lighter、normal、bold 和bolder。
+
+对于`font-weight` 属性来说，最好只用`bold` 和`normal ` 这两个值
+
+## 字体变化
+
+值：small-caps、normal
+
+small-caps会导致所有小写英文字母变成小型大写字母
+
+## 简写字体属性
+
+示例：
+
+```html
+<p>Here's a piece of text loaded up with every possible font property.</p>
+```
+
+```css
+p {font: bold italic small-caps .9em helvetica, arial, sans-serif;}
+```
+
+
+
+<center>**一条声明指定字体加粗、斜体、小型大写字母、大小和字体族**</center>
+
+
