@@ -76,8 +76,6 @@ p#center {background-position:center;}
 
 **`background-position` 属性的默认值`top` `left`    VS    `center ` `center`**
 
-
-
 `background-position:center center` 设定图片中心点与元素中心点重合,以段落的中心点为起点，然后再向各个方向重复
 
 通过把`background-position` 设定为`50%`和 `50`%，把`background-repeat` 设定为`no-repeat` ，实现了图片在背景区域内居中的效果:

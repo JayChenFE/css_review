@@ -18,8 +18,8 @@
 # html符号实体
 
 [菜鸟教程-html符号实体](http://www.runoob.com/tags/html-symbols.html)
-[](http://turner.faculty.swau.edu/webstuff/htmlsymbols.html)
-[](http://htmlhelp.com/reference/html40/entities/special.html)
+[HTML Named Special Symbols](http://turner.faculty.swau.edu/webstuff/htmlsymbols.html)
+[Special Entities](http://htmlhelp.com/reference/html40/entities/special.html)
 
 # 伪类
 
