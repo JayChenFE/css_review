@@ -30,6 +30,8 @@
 
 # 三栏-固定宽度布局
 
+主要标记的ID 是wrapper（外包装），这个容器里包含了一栏。
+
 ```html
 <div id="wrapper">
 	<article>
@@ -42,4 +44,8 @@
 #wrapper {width:960px; margin:0 auto; border:1px solid;}
 article {background:#ffed53;}
 ```
+
+[代码地址](http://js.jirengu.com/pajuvaquko/1/edit?html,css,output)
+
+![](https://raw.githubusercontent.com/JayChenFE/css_review/master/Stylin_with_CSS/img/9-1.png)
 
