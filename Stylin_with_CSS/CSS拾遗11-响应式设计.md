@@ -55,3 +55,36 @@ iPhone 4 的屏幕分辨率为320×480，而iPhone 5 的屏幕分辨率则为320
 >
 >可以参考这篇文章：http://coding.smashingmagazine.com/2012/08/20/towards-retina-web/
 
+## 媒体查询的常见参数
+
+- 媒体类型
+
+  - all：匹配所有设备
+  - handled：匹配手持设备（小屏幕、单色、带宽有限）
+  - print：匹配分页媒体或打印预览模式下的屏幕
+  - screen：匹配彩色计算机屏幕
+  - 其他媒体类型
+    - braille（盲文点字触觉反馈设备）
+    - embossed（盲文分页打印机）
+    - projection（投影仪）
+    - speech（语音合成器）
+    - tty（电话机屏幕等固定宽度字符栅格设备）
+    - tv（电视机）
+
+  要想详细了解这些媒体类型，请参考CSS 2.1 标准：http://www.w3.org/TR/CSS2/media.html
+
+  > 任意时刻浏览器窗口中只能使用一种媒体类型。媒体类型从IE6 开始就得到支持
+
+- 媒体特性
+
+  媒体特性也就是媒体某一方面的特征，一般带有`min-`或`max-`前缀。常用的媒体特性如下:
+
+  - `min-device-width` 和`max-device-width`：匹配设备屏幕的尺寸； 
+  - `min-width` 和`max-width` ：匹配视口的宽度，例如浏览器窗口宽度；
+  - `orientation`（值为`portrait `和`landscape` ）：匹配设备是横屏还是竖屏。
+
+  ​
+
+  要了解所有媒体特性，请参考CSS3 标准：http://www.w3.org/TR/css3-mediaqueries/media1
+
+  使用逻辑运算符and、not、or 及关键字all、only 组合媒体类型和媒体特性
