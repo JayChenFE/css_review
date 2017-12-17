@@ -88,3 +88,25 @@ iPhone 4 的屏幕分辨率为320×480，而iPhone 5 的屏幕分辨率则为320
   要了解所有媒体特性，请参考CSS3 标准：http://www.w3.org/TR/css3-mediaqueries/media1
 
   使用逻辑运算符and、not、or 及关键字all、only 组合媒体类型和媒体特性
+
+  参考这里：
+  https://developer.mozilla.org/en-US/docs/CSS/Media_queries#Operator_precedence
+
+  ​
+
+  关于媒体查询的扫盲文章:
+
+  http://www.javascriptkit.com/dhtmltutors/cssmediaqueries.shtml。
+
+  ​
+
+  至于要在IE8 及以下版本的IE 浏览器中使用媒体查询，可以使用腻子脚本Respond.js
+
+## `<link>`标签的`media` 属性
+
+```css
+<link type="text/css" media="print" href="css/print_styles.css" />
+<link type="text/css" media="screen and (max-width:568px)"
+href="css/iphone_styles.css" />
+```
+
